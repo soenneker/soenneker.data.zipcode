@@ -60,5 +60,9 @@ public class FileOperationsUtil : IFileOperationsUtil
 
             _gitUtil.Push(directory, username, token);
         }
+        else
+        {
+            _logger.LogInformation("There are no changes to commit");
+        }
     }
 }
