@@ -43,7 +43,7 @@ public class GitUtil : IGitUtil
     {
         return Repository.IsValid(directory);
     }
-    
+
     public void Clone(string uri, string directory)
     {
         _logger.LogInformation("Cloning uri ({uri}) into directory ({dir}) ...", uri, directory);
@@ -158,12 +158,22 @@ public class GitUtil : IGitUtil
 
     public void AddIfNotExists(string directory, string relativeFilePath)
     {
-        using (var repo = new Repository(directory))
-        {
-            if (IsFileInIndex(repo, relativeFilePath))
-                return;
+        _logger.LogDebug("Adding file ({file}) to index if it doesn't exist ...", relativeFilePath);
 
-            Commands.Stage(repo, relativeFilePath);
+        try
+        {
+            using (var repo = new Repository(directory))
+            {
+                if (IsFileInIndex(repo, relativeFilePath))
+                    return;
+
+                Commands.Stage(repo, relativeFilePath);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
         }
     }
 
@@ -176,6 +186,7 @@ public class GitUtil : IGitUtil
                 return true;
             }
         }
+
         return false;
     }
 
