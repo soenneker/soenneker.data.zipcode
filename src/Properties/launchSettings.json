@@ -4,11 +4,7 @@
     "Soenneker.Data.ZipCode": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Local",
-        "Username": "",
-        "Token": "",
-        "Name": "",
-        "Email": ""
+        "ASPNETCORE_ENVIRONMENT": "Local"
       }
     }
   }
