@@ -60,6 +60,8 @@ public class ConsoleHostedService : IHostedService
                         throw;
 
                     _logger.LogError(e, "Unhandled exception");
+
+                    await Task.Delay(2000);
                     _exitCode = 1;
                 }
                 finally

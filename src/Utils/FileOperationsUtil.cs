@@ -48,6 +48,8 @@ public class FileOperationsUtil : IFileOperationsUtil
 
         if (_gitUtil.IsRepositoryDirty(directory))
         {
+            _logger.LogInformation("Changes have been detected in the repository, commiting and pushing...");
+
             string name = Environment.GetEnvironmentVariable("Name")!;
             string email = Environment.GetEnvironmentVariable("Email")!;
             string username = Environment.GetEnvironmentVariable("Username")!;
