@@ -9,12 +9,12 @@
 Install-Package Soenneker.Data.ZipCode
 ```
 
-### ZIP codes as JSON array
+<a href='https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/ZipCodes.json'>ZIP Codes as JSON array</a>
 ```
-https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/ZipCodes.txt
+https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/ZipCodes.json
 ```
 
-### ZIP codes one per line
+<a href='https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/ZipCodes.txt'>ZIP Codes one per line</a>
 ```
 https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/ZipCodes.txt
 ```
