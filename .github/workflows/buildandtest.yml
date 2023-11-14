@@ -5,9 +5,12 @@ on:
     branches:
       - main
 
+env:
+  isPipeline: "true"
+
 jobs:
 
-  # Build, test and publish (if this is a push/merge).
+  # Build, test 
   build-and-test:
     runs-on: ubuntu-latest
   
