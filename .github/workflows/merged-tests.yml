@@ -1,4 +1,4 @@
-name: Publish
+name: merged-tests
 on:
   push:
     branches:
@@ -14,7 +14,7 @@ env:
 jobs:
 
   # Build, test
-  publish-build-and-test:
+  merged-tests:
     runs-on: ubuntu-latest
   
     steps:

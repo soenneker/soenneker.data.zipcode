@@ -1,4 +1,4 @@
-name: Build and Test
+name: pull-request-validation
 on:
   # Testing - run for any PRs.
   pull_request:
@@ -11,7 +11,7 @@ env:
 jobs:
 
   # Build, test 
-  build-and-test:
+  pull-request-validation:
     runs-on: ubuntu-latest
   
     steps:

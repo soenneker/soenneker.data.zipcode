@@ -1,4 +1,4 @@
-name: Daily automatic update
+name: daily-automatic-update
 on:
   schedule:
     - cron: "0 17 * * *"
