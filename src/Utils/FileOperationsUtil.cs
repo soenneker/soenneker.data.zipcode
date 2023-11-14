@@ -24,27 +24,17 @@ public class FileOperationsUtil : IFileOperationsUtil
         _logger = logger;
         _gitUtil = gitUtil;
     }
-
+    
     public async ValueTask SaveToGitRepo(HashSet<string> hashSet)
     {
         string directory = _gitUtil.CloneToTempDirectory();
 
-        string linesPath = Path.Combine(directory, "ZipCodes.txt");
+        await WriteList(hashSet, directory);
 
-        _fileUtil.DeleteIfExists(linesPath);
-
-        await _fileUtil.WriteAllLines(linesPath, hashSet);
-
-        string jsonPath = Path.Combine(directory, "ZipCodes.json");
-
-        _fileUtil.DeleteIfExists(jsonPath);
-
-        string? serialized = JsonUtil.Serialize(hashSet);
-
-        await _fileUtil.WriteFile(jsonPath, serialized!);
-
-        _gitUtil.AddIfNotExists(directory, "ZipCodes.txt");
-        _gitUtil.AddIfNotExists(directory, "ZipCodes.json");
+        await WriteJson(hashSet, directory);
+        
+        _gitUtil.AddIfNotExists(directory, "zipcodes.txt");
+        _gitUtil.AddIfNotExists(directory, "zipcodes.json");
 
         if (_gitUtil.IsRepositoryDirty(directory))
         {
@@ -66,5 +56,25 @@ public class FileOperationsUtil : IFileOperationsUtil
         {
             _logger.LogInformation("There are no changes to commit");
         }
+    }
+
+    private async ValueTask WriteJson(HashSet<string> hashSet, string directory)
+    {
+        string jsonPath = Path.Combine(directory, "zipcodes.json");
+
+        _fileUtil.DeleteIfExists(jsonPath);
+
+        string? serialized = JsonUtil.Serialize(hashSet);
+
+        await _fileUtil.WriteFile(jsonPath, serialized!);
+    }
+
+    private async ValueTask WriteList(HashSet<string> hashSet, string directory)
+    {
+        string linesPath = Path.Combine(directory, "zipcodes.txt");
+
+        _fileUtil.DeleteIfExists(linesPath);
+
+        await _fileUtil.WriteAllLines(linesPath, hashSet);
     }
 }
