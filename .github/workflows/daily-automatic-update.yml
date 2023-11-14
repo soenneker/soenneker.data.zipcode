@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
 
 env:
-  Username: ${{ secrets.Username }}
-  Token: ${{ secrets.Token }}
-  Name: ${{ secrets.Name }}
+  Username: ${{ secrets.USERNAME }}
+  Token: ${{ secrets.TOKEN }}
+  Name: ${{ secrets.NAME }}
   Email: ${{ secrets.EMAIL }}
 
 jobs:
