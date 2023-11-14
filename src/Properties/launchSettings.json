@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Soenneker.Data.ZipCode": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Local",
+        "Username": "",
+        "Token": "",
+        "Name": "",
+        "Email": ""
+      }
+    }
+  }
+}

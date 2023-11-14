@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net7.0</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <Platforms>AnyCPU</Platforms>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>US ZIP code data from USPS, updated daily</Description>
+        <Version Condition="'$(BUILD_VERSION)' == ''">1.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
+        <AssemblyName>Soenneker.Data.ZipCode</AssemblyName>
+        <PackageId>Soenneker.Data.ZipCode</PackageId>
+        <PackageTags>usps zip code data c# .net dotnet</PackageTags>
+        <Copyright>Copyright © 2023 Jake Soenneker</Copyright>
+        <Authors>Jake Soenneker</Authors>
+        <Company>https://soenneker.com</Company>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/soenneker/soenneker.data.zipcode</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/soenneker/soenneker.data.zipcode</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <LangVersion>latest</LangVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="..\icon.png" Pack="true" PackagePath="\" />
+        <PackageReference Include="ExcelDataReader" Version="3.7.0-develop00385" />
+        <PackageReference Include="ExcelDataReader.DataSet" Version="3.7.0-develop00385" />
+
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+
+        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="1.0.222" />
+
+        <PackageReference Include="Soenneker.Extensions.Object" Version="1.0.281" />
+
+        <PackageReference Include="Soenneker.Extensions.Stream" Version="1.0.39" />
+
+        <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="1.0.31" />
+        <PackageReference Include="LibGit2Sharp" Version="0.28.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
+        <PackageReference Include="Sodium.Core" Version="1.3.4" />
+        <PackageReference Include="Soenneker.Extensions.Configuration" Version="1.0.121" />
+        <PackageReference Include="Soenneker.Extensions.HttpResponseMessage" Version="1.0.225" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="1.0.75" />
+        <PackageReference Include="Soenneker.Utils.Directory" Version="1.0.78" />
+        <PackageReference Include="Soenneker.Utils.File" Version="1.0.243" />
+        <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+    </ItemGroup>
+</Project>
