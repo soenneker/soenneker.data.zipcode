@@ -9,7 +9,7 @@ on:
       - v*
 
 env:
-  isPipeline: "true"
+  PipelineEnvironment: "true"
 
 jobs:
 
