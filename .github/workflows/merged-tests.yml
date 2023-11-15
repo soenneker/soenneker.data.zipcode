@@ -13,8 +13,7 @@ env:
 
 jobs:
 
-  # Build, test
-  merged-tests:
+  build-and-test:
     runs-on: ubuntu-latest
   
     steps:
