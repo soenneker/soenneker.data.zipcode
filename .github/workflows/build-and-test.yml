@@ -1,4 +1,4 @@
-name: merged-tests
+name: build-and-test
 on:
   push:
     branches:
