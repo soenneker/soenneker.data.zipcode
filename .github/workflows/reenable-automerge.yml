@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  main:
+  reenable-automerge:
     if: "github.event.reason == 'Base branch was modified'"
     runs-on: ubuntu-latest
     steps:
