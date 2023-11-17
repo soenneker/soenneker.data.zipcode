@@ -42,7 +42,7 @@
 
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 
-        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="1.0.222" />
+        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="1.0.224" />
 
         <PackageReference Include="Soenneker.Extensions.Object" Version="1.0.281" />
 
