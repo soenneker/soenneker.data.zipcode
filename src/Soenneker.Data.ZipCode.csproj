@@ -55,7 +55,7 @@
         <PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
         <PackageReference Include="Soenneker.Extensions.Configuration" Version="1.0.121" />
         <PackageReference Include="Soenneker.Extensions.HttpResponseMessage" Version="1.0.225" />
-        <PackageReference Include="Soenneker.Utils.File" Version="1.0.243" />
+        <PackageReference Include="Soenneker.Utils.File" Version="1.0.245" />
         <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
     </ItemGroup>
 </Project>
