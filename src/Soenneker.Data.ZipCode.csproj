@@ -44,7 +44,7 @@
 
         <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="1.0.222" />
 
-        <PackageReference Include="Soenneker.Extensions.Object" Version="1.0.281" />
+        <PackageReference Include="Soenneker.Extensions.Object" Version="1.0.285" />
 
         <PackageReference Include="Soenneker.Extensions.Stream" Version="1.0.39" />
 
