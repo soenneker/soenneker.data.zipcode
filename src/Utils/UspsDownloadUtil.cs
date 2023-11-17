@@ -23,7 +23,7 @@ public class UspsDownloadUtil : IUspsDownloadUtil
 
     public async ValueTask<string> Download()
     {
-        HttpClient client = await _httpClientCache.GetClient(nameof(UspsDownloadUtil));
+        HttpClient client = await _httpClientCache.Get(nameof(UspsDownloadUtil));
 
         var uri = $"https://postalpro.usps.com/mnt/glusterfs/{GetDirectory()}/ZIP_Locale_Detail.xls";
 

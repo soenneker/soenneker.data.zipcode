@@ -19,7 +19,7 @@ public class Startup
 
     public static void SetupIoC(IServiceCollection services)
     {
-        services.AddHttpClientCacheAsSingleton();
+        services.AddHttpClientCache();
         services.AddHostedService<ConsoleHostedService>();
         services.AddFileUtilAsScoped();
 

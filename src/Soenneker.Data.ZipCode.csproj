@@ -40,22 +40,22 @@
         <PackageReference Include="ExcelDataReader" Version="3.7.0-develop00385" />
         <PackageReference Include="ExcelDataReader.DataSet" Version="3.7.0-develop00385" />
 
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
 
-        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="1.0.222" />
+        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="2.1.20" />
 
-        <PackageReference Include="Soenneker.Extensions.Object" Version="1.0.281" />
+        <PackageReference Include="Soenneker.Extensions.Object" Version="2.1.26" />
 
-        <PackageReference Include="Soenneker.Extensions.Stream" Version="1.0.39" />
+        <PackageReference Include="Soenneker.Extensions.Stream" Version="2.1.5" />
 
-        <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="1.0.31" />
+        <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="2.1.12" />
         <PackageReference Include="LibGit2Sharp" Version="0.28.0" />
-        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
-        <PackageReference Include="Serilog.Extensions.Hosting" Version="7.0.0" />
-        <PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
-        <PackageReference Include="Soenneker.Extensions.Configuration" Version="1.0.121" />
-        <PackageReference Include="Soenneker.Extensions.HttpResponseMessage" Version="1.0.225" />
-        <PackageReference Include="Soenneker.Utils.File" Version="1.0.243" />
-        <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+        <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+        <PackageReference Include="Soenneker.Extensions.Configuration" Version="2.1.15" />
+        <PackageReference Include="Soenneker.Extensions.HttpResponseMessage" Version="2.1.18" />
+        <PackageReference Include="Soenneker.Utils.File" Version="2.1.21" />
+        <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
     </ItemGroup>
 </Project>
