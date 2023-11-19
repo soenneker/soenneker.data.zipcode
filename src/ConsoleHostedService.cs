@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Soenneker.Data.ZipCode.Utils.Abstract;
@@ -15,21 +14,17 @@ public class ConsoleHostedService : IHostedService
     private readonly ILogger<ConsoleHostedService> _logger;
 
     private readonly IHostApplicationLifetime _appLifetime;
-    private readonly IGitUtil _gitUtil;
-    private readonly IConfiguration _config;
     private readonly IFileOperationsUtil _fileOperationsUtil;
     private readonly IExcelFileReaderUtil _excelFileReaderUtil;
     private readonly IUspsDownloadUtil _uspsDownloadUtil;
 
     private int? _exitCode;
 
-    public ConsoleHostedService(ILogger<ConsoleHostedService> logger, IHostApplicationLifetime appLifetime, IGitUtil gitUtil, IConfiguration config, 
+    public ConsoleHostedService(ILogger<ConsoleHostedService> logger, IHostApplicationLifetime appLifetime, 
         IFileOperationsUtil fileOperationsUtil, IExcelFileReaderUtil excelFileReaderUtil, IUspsDownloadUtil uspsDownloadUtil)
     {
         _logger = logger;
         _appLifetime = appLifetime;
-        _gitUtil = gitUtil;
-        _config = config;
         _fileOperationsUtil = fileOperationsUtil;
         _excelFileReaderUtil = excelFileReaderUtil;
         _uspsDownloadUtil = uspsDownloadUtil;

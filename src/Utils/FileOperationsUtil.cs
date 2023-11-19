@@ -1,10 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Soenneker.Data.ZipCode.Utils.Abstract;
-using Soenneker.Extensions.String;
+using Soenneker.Git.Util.Abstract;
+using Soenneker.Utils.Environment;
 using Soenneker.Utils.File.Abstract;
 using Soenneker.Utils.Json;
 
@@ -20,14 +20,13 @@ public class FileOperationsUtil : IFileOperationsUtil
     public FileOperationsUtil(IFileUtil fileUtil, ILogger<FileOperationsUtil> logger, IGitUtil gitUtil)
     {
         _fileUtil = fileUtil;
-
         _logger = logger;
         _gitUtil = gitUtil;
     }
     
     public async ValueTask SaveToGitRepo(HashSet<string> hashSet)
     {
-        string directory = _gitUtil.CloneToTempDirectory();
+        string directory = _gitUtil.CloneToTempDirectory("https://github.com/soenneker/soenneker.data.zipcode");
 
         await WriteList(hashSet, directory);
 
@@ -40,17 +39,14 @@ public class FileOperationsUtil : IFileOperationsUtil
         {
             _logger.LogInformation("Changes have been detected in the repository, commiting and pushing...");
 
-            string name = Environment.GetEnvironmentVariable("Name")!;
-            string email = Environment.GetEnvironmentVariable("Email")!;
-            string username = Environment.GetEnvironmentVariable("Username")!;
-            string token = Environment.GetEnvironmentVariable("Token")!;
-
-            if (name.IsNullOrEmpty() || email.IsNullOrEmpty() || username.IsNullOrEmpty() || token.IsNullOrEmpty())
-                throw new Exception("Environmental variables (Name, Email, Username, and Token) are all required");
+            string name = EnvironmentUtil.GetVariableStrict("Name");
+            string email = EnvironmentUtil.GetVariableStrict("Email");
+            string username = EnvironmentUtil.GetVariableStrict("Username");
+            string token = EnvironmentUtil.GetVariableStrict("Token");
 
             _gitUtil.Commit(directory, "Automated update from USPS", name, email);
 
-            _gitUtil.Push(directory, username, token);
+            await _gitUtil.Push(directory, username, token);
         }
         else
         {
