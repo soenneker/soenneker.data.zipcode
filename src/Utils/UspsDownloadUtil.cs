@@ -43,7 +43,7 @@ public class UspsDownloadUtil : IUspsDownloadUtil
         return tempFile;
     }
 
-    public string GetDirectory()
+    public static string GetDirectory()
     {
         var result = DateTime.UtcNow.ToString("yyyy-MM");
 
