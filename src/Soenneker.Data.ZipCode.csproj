@@ -50,7 +50,7 @@
 
         <PackageReference Include="Soenneker.Git.Util" Version="2.1.29" />
 
-        <PackageReference Include="Soenneker.Utils.Environment" Version="2.1.45" />
+        <PackageReference Include="Soenneker.Utils.Environment" Version="2.1.48" />
 
         <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="2.1.36" />
         <PackageReference Include="LibGit2Sharp" Version="0.28.0" />
