@@ -46,7 +46,7 @@
 
         <PackageReference Include="Soenneker.Extensions.Object" Version="2.1.75" />
 
-        <PackageReference Include="Soenneker.Extensions.Stream" Version="2.1.8" />
+        <PackageReference Include="Soenneker.Extensions.Stream" Version="2.1.9" />
 
         <PackageReference Include="Soenneker.Git.Util" Version="2.1.29" />
 
