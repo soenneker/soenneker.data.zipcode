@@ -46,14 +46,11 @@
 
         <PackageReference Include="Soenneker.Extensions.Object" Version="2.1.90" />
 
-        <PackageReference Include="Soenneker.Extensions.Stream" Version="2.1.9" />
-
         <PackageReference Include="Soenneker.Git.Util" Version="2.1.42" />
 
         <PackageReference Include="Soenneker.Utils.Environment" Version="2.1.53" />
 
         <PackageReference Include="Soenneker.Utils.HttpClientCache" Version="2.1.44" />
-        <PackageReference Include="LibGit2Sharp" Version="0.28.0" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
