@@ -54,7 +54,7 @@
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
         <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
-        <PackageReference Include="Soenneker.Extensions.Configuration" Version="2.1.52" />
+        <PackageReference Include="Soenneker.Extensions.Configuration" Version="2.1.53" />
         <PackageReference Include="Soenneker.Extensions.HttpResponseMessage" Version="2.1.69" />
         <PackageReference Include="Soenneker.Utils.File" Version="2.1.99" />
         <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
