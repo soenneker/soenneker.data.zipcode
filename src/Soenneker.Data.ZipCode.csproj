@@ -46,7 +46,7 @@
 
         <PackageReference Include="Soenneker.Extensions.Object" Version="2.1.123" />
 
-        <PackageReference Include="Soenneker.Git.Util" Version="2.1.94" />
+        <PackageReference Include="Soenneker.Git.Util" Version="2.1.95" />
 
         <PackageReference Include="Soenneker.Utils.Environment" Version="2.1.72" />
 
