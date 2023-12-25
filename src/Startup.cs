@@ -3,6 +3,7 @@ using Soenneker.Data.ZipCode.Utils;
 using Soenneker.Data.ZipCode.Utils.Abstract;
 using Soenneker.Git.Util.Registrars;
 using Soenneker.Utils.File.Registrars;
+using Soenneker.Utils.FileSync.Registrars;
 using Soenneker.Utils.HttpClientCache.Registrar;
 
 namespace Soenneker.Data.ZipCode;
@@ -23,6 +24,7 @@ public class Startup
         services.AddHttpClientCache();
         services.AddHostedService<ConsoleHostedService>();
         services.AddFileUtilAsScoped();
+        services.AddFileUtilSyncAsScoped();
         services.AddGitUtilAsSingleton();
         services.AddSingleton<IExcelFileReaderUtil, ExcelFileReaderUtil>();
         services.AddSingleton<IUspsDownloadUtil, UspsDownloadUtil>();

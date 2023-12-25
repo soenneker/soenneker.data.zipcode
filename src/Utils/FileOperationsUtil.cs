@@ -6,6 +6,7 @@ using Soenneker.Data.ZipCode.Utils.Abstract;
 using Soenneker.Git.Util.Abstract;
 using Soenneker.Utils.Environment;
 using Soenneker.Utils.File.Abstract;
+using Soenneker.Utils.FileSync.Abstract;
 using Soenneker.Utils.Json;
 
 namespace Soenneker.Data.ZipCode.Utils;
@@ -16,12 +17,14 @@ public class FileOperationsUtil : IFileOperationsUtil
     private readonly ILogger<FileOperationsUtil> _logger;
     private readonly IGitUtil _gitUtil;
     private readonly IFileUtil _fileUtil;
+    private readonly IFileUtilSync _fileUtilSync;
 
-    public FileOperationsUtil(IFileUtil fileUtil, ILogger<FileOperationsUtil> logger, IGitUtil gitUtil)
+    public FileOperationsUtil(IFileUtil fileUtil, ILogger<FileOperationsUtil> logger, IGitUtil gitUtil, IFileUtilSync fileUtilSync)
     {
         _fileUtil = fileUtil;
         _logger = logger;
         _gitUtil = gitUtil;
+        _fileUtilSync = fileUtilSync;
     }
     
     public async ValueTask SaveToGitRepo(HashSet<string> hashSet)
@@ -58,7 +61,7 @@ public class FileOperationsUtil : IFileOperationsUtil
     {
         string jsonPath = Path.Combine(directory, "zipcodes.json");
 
-        _fileUtil.DeleteIfExists(jsonPath);
+        _fileUtilSync.DeleteIfExists(jsonPath);
 
         string? serialized = JsonUtil.Serialize(hashSet);
 
@@ -69,7 +72,7 @@ public class FileOperationsUtil : IFileOperationsUtil
     {
         string linesPath = Path.Combine(directory, "zipcodes.txt");
 
-        _fileUtil.DeleteIfExists(linesPath);
+        _fileUtilSync.DeleteIfExists(linesPath);
 
         await _fileUtil.WriteAllLines(linesPath, hashSet);
     }

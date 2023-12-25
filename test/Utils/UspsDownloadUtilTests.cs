@@ -20,6 +20,8 @@ public class UspsDownloadUtilTests : FixturedUnitTest
     [LocalFact]
     public async Task Download_should_download()
     {
-       string result = await _util.Download();
+         await _util.GetData();
+
+        //string result = await _util.Download();
     }
 }
