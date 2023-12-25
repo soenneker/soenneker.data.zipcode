@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-Install-Package Soenneker.Data.ZipCode
+dotnet add package Soenneker.Data.ZipCode
 ```
 
 <a href='https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/zipcodes.json'>ZIP Codes as JSON array</a>
