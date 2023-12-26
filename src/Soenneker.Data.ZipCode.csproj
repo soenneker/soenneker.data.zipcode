@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Description>US ZIP code data from USPS, updated daily (if available)</Description>
+        <Description>Simply adds a US ZIP code text file list, updated daily (if available)</Description>
         <Version Condition="'$(BUILD_VERSION)' == ''">2.1.0</Version>
         <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
         <AssemblyName>Soenneker.Data.ZipCode</AssemblyName>
@@ -39,6 +39,8 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Content Include="Resources\zipcodes.txt" Pack="true" PackageCopyToOutput="true" />
+        <Content Include="Resources\zipcodes.txt" Pack="true" PackageCopyToOutput="true">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
 </Project>
