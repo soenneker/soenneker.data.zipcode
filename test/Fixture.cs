@@ -28,7 +28,5 @@ public class Fixture : UnitFixture
 
         IConfiguration config = TestUtil.BuildConfig();
         services.AddSingleton(config);
-
-        Startup.SetupIoC(services);
     }
 }
