@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Facts.Local" Version="2.1.182" />
+        <PackageReference Include="Soenneker.Facts.Local" Version="2.1.184" />
         <PackageReference Include="Soenneker.Tests.FixturedUnit" Version="2.1.282" />
         <PackageReference Include="Soenneker.Utils.Test" Version="2.1.81" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
