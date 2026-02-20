@@ -39,7 +39,7 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Content Include="Resources\zipcodes.txt" Pack="true" PackageCopyToOutput="true">
+        <Content Include="Resources\zipcodes.txt" Pack="true" PackageCopyToOutput="true" PackagePath="contentFiles\any\any\Resources\">
         </Content>
     </ItemGroup>
 </Project>
