@@ -45,7 +45,7 @@
         <Content Include="Resources\zipcodes.txt" 
                  Pack="true" 
                  PackageCopyToOutput="true"
-                 PackagePath="contentFiles/any/any/Resources/%(RecursiveDir)" 
+                 PackagePath="contentFiles/any/any/Resources/" 
                  BuildAction="None">
         </Content>
     </ItemGroup>
