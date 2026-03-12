@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Data.ZipCode.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Data.ZipCode\Soenneker.Data.ZipCode.csproj" />
     </ItemGroup>
 
     <ItemGroup>
