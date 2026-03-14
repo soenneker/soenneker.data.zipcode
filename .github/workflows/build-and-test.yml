@@ -39,6 +39,3 @@ jobs:
 
       - name: Test
         run: dotnet test test/Soenneker.Data.ZipCode.Tests/Soenneker.Data.ZipCode.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
-
-      - name: Pack
-        run: dotnet pack src/Soenneker.Data.ZipCode/Soenneker.Data.ZipCode.csproj --configuration Release --no-build --no-restore --output . --verbosity minimal
