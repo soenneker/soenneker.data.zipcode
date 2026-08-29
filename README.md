@@ -3,19 +3,23 @@
 [![](https://img.shields.io/nuget/dt/soenneker.data.zipcode.svg?style=for-the-badge)](https://www.nuget.org/packages/soenneker.data.zipcode/)
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.data.zipcode/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.data.zipcode/actions/workflows/codeql.yml)
 
-# ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Data.ZipCode
-### Simply adds a US ZIP code text file list from USPS, updated daily (if available)
+# Soenneker.Data.ZipCode
 
-## Installation
+Simply adds a US ZIP code text file list from USPS, updated daily (if available).
 
-```
+## Install
+
+```bash
 dotnet add package Soenneker.Data.ZipCode
 ```
 
-The file is copied to the output directory, and located at the relative path: `Resources\zipcodes.txt`.
+## What it provides
 
-Alternatively, you can download the ZIP code list as a text file from the following URL:
+- Simply adds a US ZIP code text file list from USPS, updated daily (if available).
+- The file is copied to the output directory, and located at the relative path: `Resources\zipcodes.txt`.
+- Alternatively, you can download the ZIP code list as a text file from the following URL:.
+- https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/src/Resources/zipcodes.txt.
 
-```
-https://raw.githubusercontent.com/soenneker/soenneker.data.zipcode/main/src/Resources/zipcodes.txt
-```
+## How to use it
+
+After installation, resolve the packaged file from the output-relative path above. The package deploys the asset but does not invoke it for you.
